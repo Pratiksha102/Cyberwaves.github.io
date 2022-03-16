@@ -1,50 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
-    rel="stylesheet">
+  <title>Document</title>
 </head>
-
 <body>
-  <div class="header">
-    <h1>London</h1>
-   
+  <h1>{{this.weatherData?.location?.name}},
+    {{this.weatherData?.location.country}}</h1>
 
-  </div>
-  <div class="row1-container">
-    <div class="box box-down cyan">
-      Location Searched: {{this.weatherData?.location?.name}},
-      {{this.weatherData?.location.country}}
-      <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+    <ul class="cards">
+<!-- 
+      -----cards1--- -->
+      <li class="cards_item">
+        <div class="card">
+          <div class="icon sun-shower">
+            <div class="cloud"></div>
+            <div class="sun">
+              <div class="rays"></div>
+            </div>
+            <div class="rain"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">Card Grid Layout</h2>
+            <p class="card_text">{{this.weatherData?.current.pressure_mb}}</p>
+           
+          </div>
+        </div>
+      </li>
+  <!-- ------card2----- -->
+  <li class="cards_item">
+    <div class="card">
+      <div class="icon thunder-storm">
+        <div class="cloud"></div>
+        <div class="lightning">
+          <div class="bolt"></div>
+          <div class="bolt"></div>
+        </div>
+      </div>
+      <div class="card_content">
+        <h2 class="card_title">Current Humidity</h2>
+        <p class="card_text">{{this.weatherData?.current.humidity}}</p>
+    
+      </div>
     </div>
+  </li>
 
-    <div class="box red">
-      Current weather conditions: {{this.weatherData?.current.condition.text}}
-      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
-    </div>
-
-    <div class="box box-down blue">
-      Temperature in Degrees Celsius: {{this.weatherData?.current.temp_c}}
-      <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
-    </div>
-  </div>
-  <div class="row2-container">
-    <div class="box orange">
+  <li class="cards_item">
+    <div class="card">
+      <div class="icon rainy">
+        <div class="cloud"></div>
+        <div class="rain"></div>
+      </div>
       
-      Feels like in Degrees Celsius: {{this.weatherData?.current.feelslike_c}}
-      <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+      <div class="card_content">
+        <h2 class="card_title">Current Weather</h2>
+        <p class="card_text">{{this.weatherData?.current.condition.text}}</p>
+        
+      </div>
     </div>
-  </div>
-  
-</body>
+  </li>
 
+  <li class="cards_item">
+    <div class="card">
+      <div class="icon cloudy">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+      </div>
+      <div class="card_content">
+        <h2 class="card_title">Temperature</h2>
+        <p class="card_text" >{{this.weatherData?.current.temp_c}}</p>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class="cards_item">
+    <div class="card">
+      <div class="icon sunny">
+        <div class="sun">
+          <div class="rays"></div>
+        </div>
+      </div>
+      
+      <div class="card_content">
+        <h2 class="card_title">Feels like </h2>
+        <p class="card_text">{{this.weatherData?.current.feelslike_c}}</p>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class="cards_item">
+    <div class="card">
+      <div class="icon flurries">
+        <div class="cloud"></div>
+        <div class="snow">
+          <div class="flake"></div>
+          <div class="flake"></div>
+        </div>
+      </div>
+      
+      <div class="card_content">
+        <h2 class="card_title">Wind Direction</h2>
+        <p class="card_text">{{this.weatherData?.current.wind_kph}}</p>
+        
+      </div>
+    </div>
+  </li>
+    </ul>
+</body>
 </html>
