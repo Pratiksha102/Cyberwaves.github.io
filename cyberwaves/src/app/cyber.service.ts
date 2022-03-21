@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class CyberService {
 
-  url="http://api.weatherapi.com/v1/current.json?key=b75cb33f5ae24f89925133554222901&q=London&aqi=no";
+  url="https://api.weatherapi.com/v1/current.json?key=b75cb33f5ae24f89925133554222901&q=London&aqi=no";
   constructor(private http:HttpClient) { }
 
    getData()
